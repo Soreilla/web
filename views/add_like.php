@@ -1,9 +1,11 @@
 <?php
 //echo "1";
+include '../config.php';
 include  "C:\wamp\www\projet2A_WEB\core\ProduitC.php";
 if(isset($_POST['id_prod'],$_SESSION['id']))
 {
+	$p= new produitC();
 	$id_prod=$_POST['id_prod'];
-	echo nombre_jaime(2);
+    $p->nombre_jaime($id_prod);
 }
 ?>
