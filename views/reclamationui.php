@@ -4,7 +4,7 @@ include'C:\wamp\www\projet2A_WEB\core\reclammationC.php';
 
 $r= new reclamationC();
 $liste=$r->afficherReclamation();
-$reponse=$r->afficherReponse();
+//$reponse=$r->afficherReponse();
 //header('Location:image2.php')
 ?>
 <!DOCTYPE html>

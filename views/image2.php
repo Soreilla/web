@@ -6,11 +6,12 @@ $c= new commentaireC();
 $liste=$c->afficherCommentaire();
 $p= new produitC();
 $listeP=$p->recup_produit();
-//$p->ajouter_jaime(2);
+//$pardon=$p->deja_aime(2);
+//echo $pardon;
 
 
 //$njaime=$p->nombre_jaime(1);
-
+//echo $njaime;
 ?>
 <!doctype html>
 <html>

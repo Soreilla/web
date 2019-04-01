@@ -283,11 +283,11 @@ $liste=$c->afficherReclamation();
             </div>-->
              <div class="clearfix"> </div>
               <div class="col-md-12 form-group2 group-mail">
-            <form method="POST" action="insererReponse.php">
+            <form method="POST" action="">
             <select>
-            	<option name="reponse"value="Votre reclamation est en cours de traitement!">Votre reclamation est en cours de traitement!</option>
-            	<option name="reponse"value="Desole cher client mais nous ne pouvons donner suite a votre reclamation">Desole cher client mais nous ne pouvons donner suite a votre reclamation</option>
-            	<option name="reponse" value="Bien Reçu">Bien Reçu</option>
+            	<option name="reponse" value="Votre reclamation est en cours de traitement!">Votre reclamation est en cours de traitement!</option>
+            	<option name="reponse" value="Desole cher client mais nous ne pouvons donner suite a votre reclamation">Desole cher client mais nous ne pouvons donner suite a votre reclamation</option>
+            	<option name="reponse"  value="Bien Reçu">Bien Reçu</option>
             	<option name="reponse"value="Veuillez vous présenter au lieu de vente">Veuillez vous présenter au lieu de vente</option>
             	<option name="reponse"value="Merci ">Merci </option>
             
@@ -307,12 +307,12 @@ $liste=$c->afficherReclamation();
           	puis dans inserer reponse mettre un header afficherReclamation.php-->
           	<?php
           	$re=$_GET['recup'];
-          	echo $re;
+          	//echo $re;
           	/*$rep=$_POST['autre'];
           	echo $rep;*/
           	?>
 
-				<a href="insererReponse.php?recup=$re"><input type="button" name="" value="Envoyer" id="pub"></a>
+				<a href="afficherReclamation.php"><input type="button" name="" value="Envoyer" id="pub"></a>
 			
             </div>
            
