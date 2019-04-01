@@ -1,7 +1,7 @@
 <?php
 //include '../config.php';
 session_start();
-	$_SESSION['id']=1;
+	$_SESSION['id']=2;
 class ProduitC{
 	
 	function recup_produit(){
@@ -57,21 +57,19 @@ class ProduitC{
 		$db=config::getConnexion();
 		try{
 			$liste=$db->query($sql);
-			foreach ($liste as $rows)
+			$rows=$liste->rowCount() ;
+			//return($rows);
+			if($rows==0){
+				return false;
+			}else
 			{
-				if($rows==0){
-					return false;
-				}else
-				{
-					return true;
-				}
+				return true;
 			}
-				//$rows=mysql_num_rows($liste);
-				
-		}
-		catch (Exception $e){
+		
+			}catch (Exception $e){
             echo 'Erreur: '.$e->getMessage();
         }
+ 
 
 
 	}

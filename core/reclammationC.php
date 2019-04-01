@@ -68,7 +68,7 @@ $db = config::getConnexion();
 			die('Erreur: '.$c->getMessage());
 		}
 }
-function afficherReponse($id_reclamation)
+function afficherReponse()
 {
 	$sql="SELECT reponse FROM reclamation where id_reclamation=:id_reclamation";
 	$db = config::getConnexion();
@@ -83,12 +83,12 @@ function afficherReponse($id_reclamation)
 }
 function InsererReponse()
 {
-	$sql="INSERT INTO  reclamation (reponse) values(".$reclamation->getReponse().") where id_reclamation=id_reclamation";
+	$sql="INSERT INTO  reclamation (reponse) values(reponse) where id_reclamation=id_reclamation";
 	$db = config::getConnexion();
 	try{
 		$req=$db->prepare($sql);
 			$req->bindValue(':id_reclamation',$_GET['recup']);
-			
+			$req->bindValue(':reponse',$_GET['autre']);
 			$req->execute();		
 		
 	}catch(Exception $e){
